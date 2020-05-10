@@ -15,7 +15,8 @@ int main (int argc, char** argv)
         // insert next value in unsorted at the end of sorted
         sorted[i] = unsorted[i];
 
-        // loop backwards over sorted moving the newly inserted value into place
+        // loop backwards over sorted moving the newly 
+        // inserted value into place
         for (int j = i-1; j >= 0; j--) {
             if (unsorted[i] < sorted[j]) {
                 long temp = sorted[j];
