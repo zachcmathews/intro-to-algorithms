@@ -51,14 +51,12 @@ void merge_sort(int sequence[], size_t len)
             left_index++;
         }
 
-        // if left or right is exhausted, exhaust the other and exit
+        // if left or right is exhausted, exhaust the other
         if (left_index >= half) {
-            for (int j = i+1; j < len; j++) sequence[j] = right[right_index++];
-            break;
+            while (++i < len) sequence[i] = right[right_index++];
         }
         if (right_index >= len-half) {
-            for (int j = i+1; j < len; j++) sequence[j] = left[left_index++];
-            break;
+            while (++i < len) sequence[i] = left[left_index++];
         }
     }
 }
