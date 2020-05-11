@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 void merge_sort(int sequence[], size_t len);
 
@@ -34,8 +35,18 @@ void merge_sort(int sequence[], size_t len)
     
     // conquer
     if (half > 1) {
+        for (int i = 0; i < half; i++) printf("%i ", left[i]);
+        printf("\t");
+        for (int i = 0; i < len-half; i++) printf("%i ", right[i]);
+        printf("\n");
+
         merge_sort(left, half);
         merge_sort(right, len-half);
+
+        for (int i = 0; i < half; i++) printf("%i ", left[i]);
+        printf("\t");
+        for (int i = 0; i < len-half; i++) printf("%i ", right[i]);
+        printf("\n");
     }
 
     // combine

@@ -13,7 +13,7 @@ selection-sort: selection-sort.c
 	gcc -Wall selection-sort.c -o build/selection-sort
 
 merge-sort: merge-sort.c
-	gcc -Wall merge-sort.c -o build/merge-sort
+	gcc -Wall merge-sort.c -lm -o build/merge-sort
 
 build:
 	mkdir build
