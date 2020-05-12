@@ -1,4 +1,4 @@
-all: build insertion-sort linear-search binary-addition selection-sort merge-sort
+all: build insertion-sort linear-search binary-addition selection-sort merge-sort binary-search
 
 insertion-sort: insertion-sort.c
 	gcc -Wall insertion-sort.c -o build/insertion-sort
@@ -13,7 +13,10 @@ selection-sort: selection-sort.c
 	gcc -Wall selection-sort.c -o build/selection-sort
 
 merge-sort: merge-sort.c
-	gcc -Wall merge-sort.c -lm -o build/merge-sort
+	gcc -Wall merge-sort.c -o build/merge-sort
+
+binary-search: binary-search.c
+	gcc -Wall binary-search.c -o build/binary-search
 
 build:
 	mkdir build
