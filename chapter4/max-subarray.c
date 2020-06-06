@@ -70,13 +70,19 @@ void find_max_subarray(
     Subarray right_max;
     find_max_subarray(sequence, mid+1, end, &right_max);
 
-    if (left_max.sum > crossing_max.sum && left_max.sum > right_max.sum) {
+    if (
+        left_max.sum > crossing_max.sum 
+        && left_max.sum > right_max.sum
+    ) {
         max->start = left_max.start;
         max->end = left_max.end;
         max->sum = left_max.sum;
         return;
     }
-    else if (crossing_max.sum > left_max.sum && crossing_max.sum > right_max.sum) {
+    else if (
+        crossing_max.sum > left_max.sum 
+        && crossing_max.sum > right_max.sum
+    ) {
         max->start = crossing_max.start;
         max->end = crossing_max.end;
         max->sum = crossing_max.sum;
