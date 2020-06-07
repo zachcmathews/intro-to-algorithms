@@ -49,7 +49,7 @@ int main (int argc, char** argv)
 }
 
 void find_max_subarray(
-        int sequence[], size_t start, size_t end, Subarray* max
+    int sequence[], size_t start, size_t end, Subarray* max
 )
 {
     if (start == end) {
@@ -97,7 +97,7 @@ void find_max_subarray(
 }
 
 void find_max_crossing_subarray(
-        int sequence[], size_t start, size_t end, Subarray* max
+    int sequence[], size_t start, size_t end, Subarray* max
 )
 {
     size_t mid = (start + end) / 2;
