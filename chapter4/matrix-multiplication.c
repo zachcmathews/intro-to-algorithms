@@ -1,30 +1,33 @@
 #include <stdio.h>
-#include <math.h>
 
-#define n 3
+#define UNUSED(x) (void)(x)
+#define N 3
 
-int main(int argc, char** argv)
+int main(int argc, char* argv[])
 {
-    int A[n][n] = {
+    UNUSED(argc);
+    UNUSED(argv);
+
+    int A[N][N] = {
         { 1, 1, 1 },
         { 1, 1, 1 },
         { 1, 1, 1 }
     };
 
-    int B[n][n] = {
+    int B[N][N] = {
         { 1, 1, 1 },
         { 1, 2, 1 },
         { 1, 1, 1 }
     };
 
     // Compute multiplication
-    long long C[n][n];
-    for (size_t i = 0; i < n; i++)
+    long long C[N][N];
+    for (size_t i = 0; i < N; i++)
     {
-        for (size_t j = 0; j < n; j++)
+        for (size_t j = 0; j < N; j++)
         {
             C[i][j] = 0;
-            for (size_t k = 0; k < n; k++)
+            for (size_t k = 0; k < N; k++)
             {
                 C[i][j] += A[i][k] * B[k][j];
             }
@@ -32,13 +35,12 @@ int main(int argc, char** argv)
     }
 
     // Display results
-    for (size_t i = 0; i < n; i++)
+    for (size_t i = 0; i < N; i++)
     {
-        for (size_t j = 0; j < n; j++)
+        for (size_t j = 0; j < N; j++)
         {
             printf("%lli ", C[i][j]);
         }
-
         printf("\n");
     }
 
